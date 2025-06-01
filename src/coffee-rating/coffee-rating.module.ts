@@ -5,12 +5,12 @@ import { DatabaseModule } from 'src/database/database.module';
 
 @Module({
   imports: [
-    DatabaseModule.register({
-      type: 'postgres',
-      host: 'localhost',
-      password: 'password',
-      port: 5432,
-    }),
+    // DatabaseModule.register({
+    //   type: 'postgres',
+    //   host: 'localhost',
+    //   password: 'password',
+    //   port: 5432,
+    // }),
     CoffeesModule,
   ],
   providers: [CoffeeRatingService],
