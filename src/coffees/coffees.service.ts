@@ -20,10 +20,10 @@ export class CoffeesService {
     private readonly connection: Connection,
     // private readonly configService: ConfigService,
     //    @Inject(COFFEE_BRANDS) coffeeBrands: string[]
-    @Inject(coffeesConfig.KEY)
-    private readonly coffeesConfiguration: ConfigType<typeof coffeesConfig>
+    // @Inject(coffeesConfig.KEY)
+    // private readonly coffeesConfiguration: ConfigType<typeof coffeesConfig>
   ) {
-    console.log(coffeesConfiguration.foo);
+    // console.log(coffeesConfiguration.foo);
   }
 
   findAll(paginationQuery: PaginationQueryDto) {
@@ -42,7 +42,7 @@ export class CoffeesService {
     });
 
     if (!coffee) {
-      throw new NotFoundException(`Coffe #${id} not found`);
+      throw new NotFoundException(`Coffee #${id} not found`);
     }
 
     return coffee;
